@@ -30,4 +30,6 @@ The model weights (`*.safetensors`, `pytorch_model.bin`) are **not** in this rep
 
 ## Note on reproducibility
 
-The training runs were launched as background processes and resumed from checkpoints, because a single notebook kernel could not survive the long GPU jobs. Re-running a training cell whose final model already exists therefore prints `final exists / skip training` and skips the job instead of retraining; the raw logs listed above are the full record of those runs, and the notebook's saved outputs are the record of the executed session. The path helper has been rewritten so that the notebook runs in a standard Jupyter kernel without relying on `__file__`.
+The training runs were launched as background processes and resumed from checkpoints, because a single notebook kernel could not survive the long GPU jobs. Re-running a training cell whose final model already exists therefore prints `final exists / skip training` and skips the job instead of retraining; the raw logs listed above are the full record of those runs, and the notebook's saved outputs are the record of the executed session.
+
+One helper that resolves the working directory relies on `__file__`, which a standard Jupyter kernel does not define; the notebook therefore has to be run with the repository root as the working directory. Replacing that helper with a notebook-safe path is a known open item.

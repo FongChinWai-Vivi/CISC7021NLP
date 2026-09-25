@@ -1,0 +1,76 @@
+{
+  "task": "JOB3 multi-seed rerun of Run C",
+  "settings": {
+    "base_model": "C:\\Users\\07viv\\Desktop\\CISC7021\\Model and Datasets\\llama-42m",
+    "train_file": "C:\\Users\\07viv\\Desktop\\CISC7021\\Model and Datasets\\data\\zh_train.jsonl",
+    "blocks": {
+      "train": 7960,
+      "validation": 393,
+      "block_size": 512
+    },
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "epochs": 2,
+    "batch_size": 32,
+    "fp16": true,
+    "optim": "adamw_torch",
+    "lr_scheduler": "linear",
+    "warmup_ratio": 0.01,
+    "eval_steps": 200,
+    "log_steps": 50,
+    "seed": 123
+  },
+  "training": {
+    "skipped": false,
+    "run_dir": "C:\\Users\\07viv\\Desktop\\CISC7021\\assignment1_artifacts\\runs\\run_C_seed123",
+    "final_dir": "C:\\Users\\07viv\\Desktop\\CISC7021\\saved_models\\run_C_seed123_final",
+    "duration_min": 55.44,
+    "steps": 498
+  },
+  "runs": {
+    "run_C_seed42": {
+      "seed": 42,
+      "zh_test": 12.93,
+      "en_test": 4.94,
+      "pt_test": 154450.56,
+      "source": "saved_models\\run_C_final (existing artifact)"
+    },
+    "run_C_seed123": {
+      "seed": 123,
+      "zh_test": 13.90594966506958,
+      "en_test": 4.773049028277397,
+      "final_dir": "C:\\Users\\07viv\\Desktop\\CISC7021\\saved_models\\run_C_seed123_final",
+      "steps": 498,
+      "duration_min": 55.44
+    }
+  },
+  "zh_test": {
+    "values": [
+      12.93,
+      13.90594966506958
+    ],
+    "seed42": 12.93,
+    "seed123": 13.90594966506958,
+    "n_seeds": 2,
+    "mean": 13.418,
+    "std_sample_ddof1": 0.6901,
+    "std_population_ddof0": 0.488
+  },
+  "en_test": {
+    "values": [
+      4.94,
+      4.773049028277397
+    ],
+    "seed42": 4.94,
+    "seed123": 4.773049028277397,
+    "n_seeds": 2,
+    "mean": 4.8565,
+    "std_sample_ddof1": 0.1181,
+    "std_population_ddof0": 0.0835
+  },
+  "summary": {
+    "zh_test": "seed42=12.93, seed123=13.91, mean=13.42, std(ddof=1)=0.69",
+    "en_test": "seed42=4.94, seed123=4.77, mean=4.86, std(ddof=1)=0.12"
+  },
+  "note": "Two-seed study over Run C (lr 1e-4, wd 0.01, 2 epochs, bs 32, fp16, adamw_torch, linear schedule, warmup_ratio 0.01). Run C seed42 values are the existing saved_models\\run_C_final artifact; Run C seed123 was retrained here. Perplexity = fp16 per-document exp(mean NLL), computed with the notebook's compute_ppl logic."
+}

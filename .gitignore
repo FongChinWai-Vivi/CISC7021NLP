@@ -1,0 +1,14 @@
+# model weights and training state — exceed GitHub's 100 MB per-file limit, not part of the deliverables
+**/*.safetensors
+**/*.bin
+**/optimizer.pt
+**/scheduler.pt
+**/rng_state.pth
+**/training_args.bin
+**/pytorch_model.bin
+
+# local caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store

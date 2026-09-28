@@ -2,7 +2,7 @@
 
 Submission for CISC7021 Assignment 1: decoding strategies, perplexity evaluation (English / Chinese) and continued pre-training of a 42M-parameter Llama-2 model.
 
-Author: **Fong Chin Wai (Vivi)** — MC653748 — B.Sc. Computer Science, Honours College, University of Macau
+Author: **Fong Chin Wai (Vivi)** — MC653748 
 
 ## Contents
 

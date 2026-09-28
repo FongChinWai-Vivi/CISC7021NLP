@@ -9,8 +9,8 @@ Author: **Fong Chin Wai (Vivi)** — MC653748
 | Path | Description |
 |---|---|
 | `CISC7021_Assignment1.ipynb` | The deliverable notebook, with all cells executed and outputs saved |
-| `CISC7021_Assignment1_report.pdf` | The ACL-format report |
-| `overleaf_upload.zip` | Report source: `main.tex` (ACL template) + the four training-curve figures |
+| `CISC7021_Assignment1_report.pdf` | The report |
+| `overleaf_upload.zip` | Report source: `main.tex` + the four training-curve figures |
 | `assignment1_artifacts/train_A.json`, `train_B.json`, `train_C.json`, `train_C_seed123.json`, `train_D.json` | Raw training logs for every run (loss steps, learning rates, timings) |
 | `assignment1_artifacts/runs/<run>/checkpoint-*/trainer_state.json` | Per-checkpoint training state (log history, best metric, epoch) |
 | `assignment1_artifacts/final_summary.json` / `.csv`, `seed_study.json`, `task1_metrics.csv`, `task4_qc.json` | Result summaries: decoding metrics, per-group PPL, Run D results, second-seed study, Task 4 QC output |
